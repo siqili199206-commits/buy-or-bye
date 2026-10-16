@@ -1,0 +1,7 @@
+interface:
+  display_name: "先别买 · Buy or Bye"
+  short_description: "先判断这次购买是否应该发生，再决定买什么或不买的个人理性购物助手"
+  default_prompt: "Use $buy-or-bye to decide whether this purchase should happen before recommending products."
+
+policy:
+  allow_implicit_invocation: true
