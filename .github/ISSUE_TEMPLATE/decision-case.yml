@@ -1,0 +1,52 @@
+name: Share a decision case
+description: Submit an anonymized shopping dilemma for calibration and testing.
+title: "[Case] "
+labels: [decision-case]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Buy or Bye. Remove names, addresses, order numbers, phone numbers, and account details before submitting.
+  - type: input
+    id: item
+    attributes:
+      label: Item or purchase category
+      placeholder: Running shoes
+    validations:
+      required: true
+  - type: textarea
+    id: dilemma
+    attributes:
+      label: What are you trying to decide?
+      placeholder: I have a half marathon in six weeks and my current shoes are visibly worn.
+    validations:
+      required: true
+  - type: textarea
+    id: known-facts
+    attributes:
+      label: Decision-relevant facts
+      description: Include real use, owned alternatives, budget pressure, timing, or return options when known.
+    validations:
+      required: true
+  - type: dropdown
+    id: expected-verdict
+    attributes:
+      label: Your expected direction, if any
+      options:
+        - Unsure
+        - Buy
+        - Wait
+        - Validate first
+        - Reuse or repair
+        - Borrow or rent
+        - Buy used
+        - Do not buy
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed personal, order, payment, address, and account information.
+          required: true
